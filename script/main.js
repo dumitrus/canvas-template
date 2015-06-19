@@ -34,6 +34,7 @@
 			ctx.beginPath();
 			ctx.arc(this.x,this.y,this.r,0,Math.PI*2,false);
 			ctx.fill();
+			ctx.stroke();
 			
 		};
 		Ball.prototype.move = function(){
@@ -71,6 +72,8 @@
 			ctx.clearRect(0,0,cW,cH);
 
 			ctx.fillStyle = "#dd5522";
+			ctx.strokeStyle = "#dd8800";
+			ctx.lineWidth = 5;
 			for(var i=0;i<ballsNr;i++){
 				balls[i].draw();
 				balls[i].move();
