@@ -84,6 +84,18 @@
 	
 		window.requestAnimFrame(render);
 
+		function preventDefaultFn(event){
+			event.preventDefault();
+		}
+
+		window.addEventListener("mousedown",preventDefaultFn,false);
+		window.addEventListener("mousemove",preventDefaultFn,false);
+		window.addEventListener("mouseup",preventDefaultFn,false);
+		
+		window.addEventListener("touchstart",preventDefaultFn,false);
+		window.addEventListener("touchmove",preventDefaultFn,false);
+		window.addEventListener("touchend",preventDefaultFn,false);
+
 	}
 	window.addEventListener("load",init,false);
 })();
