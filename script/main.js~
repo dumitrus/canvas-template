@@ -1,0 +1,6 @@
+(function(){
+	function init(){
+		console.log("hei");
+	}
+	window.addEventListener("load",init,false);
+})();
